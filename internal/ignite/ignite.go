@@ -112,7 +112,8 @@ func createTempManifestFile(manifest *Manifest) (string, error) {
 
 // runIgniteCommand executes an ignite command with the given arguments
 func runIgniteCommand(args ...string) error {
-	fmt.Println("Running ignite command:", args)
+	// fmt.Println("Running ignite command:", args)
+	fmt.Println("Provisioning VM...")
 	cmd := exec.Command("sudo", append([]string{"ignite"}, args...)...)
 	var stdout, stderr bytes.Buffer
 	cmd.Stdout = &stdout
